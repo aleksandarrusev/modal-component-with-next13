@@ -1,4 +1,6 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+This is the code from the ["Modal component with Next.js"](https://devrecipes.net/modal-component-with-next-js/) article in my blog [devrecipes.net](https://devrecipes.net)
+
+The project was bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
 
