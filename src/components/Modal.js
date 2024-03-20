@@ -1,4 +1,4 @@
-import React, {useCallback, useEffect, useState} from "react";
+import React, {useCallback, useEffect} from "react";
 import ReactDOM from "react-dom";
 
 const Modal = ({ onClose, children, title }) => {
@@ -14,15 +14,16 @@ const Modal = ({ onClose, children, title }) => {
     }, []);
 
     useEffect(() => {
-        // remove the event listener when the modal is closed
-        return () => window.removeEventListener('click', backDropHandler);
-    }, []);
-
-    useEffect(() => {
+        // We wrap it inside setTimeout in order to prevent the eventListener to be attached before the modal is open.
         setTimeout(() => {
             window.addEventListener('click', backDropHandler);
         })
     }, [])
+
+    useEffect(() => {
+        // remove the event listener when the modal is closed
+        return () => window.removeEventListener('click', backDropHandler);
+    }, []);
 
     const handleCloseClick = (e) => {
         e.preventDefault();

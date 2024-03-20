@@ -1,4 +1,4 @@
-import Modal from "src/components/Modal";
+import Modal from "../components/Modal";
 import {useState} from "react";
 
 
